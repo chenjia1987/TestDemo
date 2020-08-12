@@ -10,24 +10,13 @@ namespace NetFrameworkOO
     {
         static void Main(string[] args)
         {
-            C c = new C() { ID = 1, Name = "A" };
-            B b = c;
+            //NetFrameworkOO.AbstractDemo.Class1 class1 = new AbstractDemo.Class1();
+            //class1.NonAbstractMethod();
 
+            //NetFrameworkOO.AbstractDemo.Class7 class7 = new AbstractDemo.Class7();
+            //class7.NonAbstractMethod();
 
-            Console.WriteLine(b.Name);
+            //NetFrameworkOO.InterfaceDemo.Class4 class4 = new InterfaceDemo.Class4();
         }
     }
-
-    public class A
-    {
-        public int ID { get; set; }
-        public string Name { get; set; }
-    }
-
-    public class B : A
-    { 
-    
-    }
-
-    public class C : B { }
 }
