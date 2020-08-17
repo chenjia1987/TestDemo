@@ -32,13 +32,4 @@ namespace ConsoleApp1
             //typeConverterDemo.fun2();
         }
     }
-
-    
-
-    
-
-    
-
-    
-
 }
