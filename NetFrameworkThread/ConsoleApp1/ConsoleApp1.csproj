@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F2E5788-1C77-4920-8CB0-558A9D2F5F0F}</ProjectGuid>
+    <ProjectGuid>{D0A40B8C-8623-4E60-98E2-756018D8044A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ConsoleApp1</RootNamespace>
     <AssemblyName>ConsoleApp1</AssemblyName>
@@ -43,12 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConvertDemo.cs" />
-    <Compile Include="DateTimeDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringDemo.cs" />
-    <Compile Include="TypeConverterDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

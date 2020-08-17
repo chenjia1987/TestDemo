@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -42,37 +46,23 @@ namespace ConsoleApp1
             //Console.WriteLine(String.Format("我是格式化的方法：{0}", "123"));
             //Console.WriteLine("{0:D}格式化：" + String.Format("{0:D}", DateTime.Now));
             //Console.WriteLine("{0:d}格式化：" + String.Format("{0:d}", DateTime.Now));
-
             //Console.WriteLine("{0:F}格式化：" + String.Format("{0:F}", DateTime.Now));
             //Console.WriteLine("{0:f}格式化：" + String.Format("{0:f}", DateTime.Now));
-
             //Console.WriteLine("{0:g}格式化：" + String.Format("{0:g}", DateTime.Now));
             //Console.WriteLine("{0:gg}格式化：" + String.Format("{0:gg}", DateTime.Now));
             //Console.WriteLine("{0:G}格式化：" + String.Format("{0:G}", DateTime.Now));
-
             //Console.WriteLine("{0:m}格式化：" + String.Format("{0:m}", DateTime.Now));
-
-
             //Console.WriteLine("{0:r}格式化：" + String.Format("{0:r}", DateTime.Now));
             //Console.WriteLine("{0:R}格式化：" + String.Format("{0:R}", DateTime.Now));
-
             //Console.WriteLine("{0:s}格式化：" + String.Format("{0:s}", DateTime.Now));
-
             //Console.WriteLine("{0:t}格式化：" + String.Format("{0:t}", DateTime.Now));
             //Console.WriteLine("{0:T}格式化：" + String.Format("{0:T}", DateTime.Now));
             //Console.WriteLine("{0:%t}格式化：" + String.Format("{0:%t}", DateTime.Now));
             //Console.WriteLine("{0:tt}格式化：" + String.Format("{0:tt}", DateTime.Now));
-
             //Console.WriteLine("{0:u}格式化：" + String.Format("{0:u}", DateTime.Now));
             //Console.WriteLine("{0:U}格式化：" + String.Format("{0:U}", DateTime.Now));
-
             Console.WriteLine("{0:y}格式化：" + String.Format("{0:y}", DateTime.Now));
             Console.WriteLine("{0:Y}格式化：" + String.Format("{0:Y}", DateTime.Now));
-
-
-
-
-
 
             ////返回一个新字符串，该字符串通过在此实例中的字符左侧填充指定的 Unicode 字符来达到指定的总长度，从而使这些字符右对齐。
             //Console.WriteLine($"填充后的字符串为：\n{"Visual C# Express".PadLeft("Visual C# Express".Length + 4, '_')}");
