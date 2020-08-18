@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionTest1.cs" />
     <Compile Include="ReflectionTest2.cs" />
   </ItemGroup>
   <ItemGroup>
