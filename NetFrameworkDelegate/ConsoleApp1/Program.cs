@@ -10,14 +10,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //DelegateDemo delegateDemo = new DelegateDemo();
+            ConsoleApp1.DelegateDemo1.DelegateDemo1 delegateDemo1 = new ConsoleApp1.DelegateDemo1.DelegateDemo1();
+            //delegateDemo1.Fun1();
+            //delegateDemo1.Fun2();
+            //delegateDemo1.Fun3();
+            //delegateDemo1.Fun4();
 
-            MethodWithCallback(1, 2, DelegateDemo.ConsoleWriteLine);
-        }
+            //ConsoleApp1.DelegateDemo2.DelegateDemo2 delegateDemo2 = new ConsoleApp1.DelegateDemo2.DelegateDemo2();
 
-        public static void MethodWithCallback(int param1, int param2, Del callback)
-        {
-            callback("The number is: " + (param1 + param2).ToString());
+            //ConsoleApp1.DelegateDemo3.DelegateDemo3 delegateDemo3 = new ConsoleApp1.DelegateDemo3.DelegateDemo3();
+
+            //ConsoleApp1.DelegateDemo4.DelegateDemo4 delegateDemo4 = new ConsoleApp1.DelegateDemo4.DelegateDemo4();
+
+            //ConsoleApp1.DelegateDemo5.DelegateDemo5 delegateDemo5 = new ConsoleApp1.DelegateDemo5.DelegateDemo5();
+
+            //ConsoleApp1.DelegateDemo6.DelegateDemo6 delegateDemo6 = new ConsoleApp1.DelegateDemo6.DelegateDemo6();
+
+            //ConsoleApp1.DelegateDemo7.DelegateDemo7 delegateDemo7 = new ConsoleApp1.DelegateDemo7.DelegateDemo7();
+
+            //ConsoleApp1.DelegateDemo8.DelegateDemo8 delegateDemo8 = new ConsoleApp1.DelegateDemo8.DelegateDemo8();
+
+            //ConsoleApp1.DelegateDemo9.DelegateDemo9 delegateDemo9 = new ConsoleApp1.DelegateDemo9.DelegateDemo9();
+
+            //ConsoleApp1.DelegateDemo10.DelegateDemo10 delegateDemo10 = new ConsoleApp1.DelegateDemo10.DelegateDemo10();
+            ConsoleApp1.DelegateDemo11.DelegateDemo11 delegateDemo11 = new ConsoleApp1.DelegateDemo11.DelegateDemo11();
         }
     }
 }

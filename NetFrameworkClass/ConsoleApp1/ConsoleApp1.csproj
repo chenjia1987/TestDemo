@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8E106A94-3D8C-47F4-8D02-C566DDAA9274}</ProjectGuid>
+    <ProjectGuid>{6C6A13CF-3D09-406B-849A-4B49974250D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ConsoleApp1</RootNamespace>
     <AssemblyName>ConsoleApp1</AssemblyName>
@@ -43,17 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelegateDemo1.cs" />
-    <Compile Include="DelegateDemo10.cs" />
-    <Compile Include="DelegateDemo11.cs" />
-    <Compile Include="DelegateDemo2.cs" />
-    <Compile Include="DelegateDemo3.cs" />
-    <Compile Include="DelegateDemo4.cs" />
-    <Compile Include="DelegateDemo5.cs" />
-    <Compile Include="DelegateDemo6.cs" />
-    <Compile Include="DelegateDemo7.cs" />
-    <Compile Include="DelegateDemo8.cs" />
-    <Compile Include="DelegateDemo9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
