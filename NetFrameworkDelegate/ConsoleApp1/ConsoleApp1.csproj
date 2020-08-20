@@ -46,6 +46,7 @@
     <Compile Include="DelegateDemo1.cs" />
     <Compile Include="DelegateDemo10.cs" />
     <Compile Include="DelegateDemo11.cs" />
+    <Compile Include="DelegateDemo12.cs" />
     <Compile Include="DelegateDemo2.cs" />
     <Compile Include="DelegateDemo3.cs" />
     <Compile Include="DelegateDemo4.cs" />

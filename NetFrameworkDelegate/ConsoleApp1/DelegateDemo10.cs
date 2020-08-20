@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1.DelegateDemo10
 {
@@ -57,7 +54,7 @@ namespace ConsoleApp1.DelegateDemo10
 		public event EventHandler MyEvent;
 		public void DoSomething()
 		{
-			// 做某些其他的事情
+			//做某些其他的事情
 			Console.WriteLine("DoSomething invoked!");
 			DelegateDemo10.FireEvent(MyEvent, this, EventArgs.Empty); //触发事件
 		}
