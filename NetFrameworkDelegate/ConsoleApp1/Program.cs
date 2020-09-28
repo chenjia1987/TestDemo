@@ -28,8 +28,8 @@ namespace ConsoleApp1
             //ConsoleApp1.DelegateDemo11.DelegateDemo11 delegateDemo11 = new ConsoleApp1.DelegateDemo11.DelegateDemo11();
 
             ConsoleApp1.DelegateDemo12.DelegateDemo12 delegateDemo12 = new ConsoleApp1.DelegateDemo12.DelegateDemo12();
-            delegateDemo12.DelegateTest();
-            //delegateDemo12.EventTest();
+            //delegateDemo12.DelegateTest();
+            delegateDemo12.EventTest();
         }
     }
 }

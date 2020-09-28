@@ -9,7 +9,6 @@ namespace ConsoleApp1
 {
     class ConvertDemo
     {
-
         /// <summary>
         /// 装箱拆箱
         /// </summary>
@@ -33,9 +32,16 @@ namespace ConsoleApp1
         public void fun3()
         {
             //将日期和时间的指定字符串表示形式转换为等效的日期和时间值。
-            Console.WriteLine(Convert.ToDateTime("2020-08-11"));
+            //Console.WriteLine(Convert.ToDateTime("2020-08-11"));
+            //Console.WriteLine(Convert.ToDateTime("2020 08 11", new DateTimeFormatInfo() { ShortDatePattern = "yyyyMMdd" }));
+        }
 
-            Console.WriteLine(Convert.ToDateTime("2020 08 11", new DateTimeFormatInfo() { ShortDatePattern = "yyyyMMdd" }));
+        /// <summary>
+        /// 浮点类型转换
+        /// </summary>
+        public void fun4()
+        {
+            Console.WriteLine(Convert.ToDecimal("123a"));
         }
     }
 }

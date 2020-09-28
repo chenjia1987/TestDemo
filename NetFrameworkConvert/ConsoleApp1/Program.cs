@@ -8,10 +8,12 @@
             //convertDemo.fun1();
             //convertDemo.fun2();
             //convertDemo.fun3();
+            convertDemo.fun4();
 
             TypeConverterDemo typeConverterDemo = new TypeConverterDemo();
             //typeConverterDemo.fun1();
             //typeConverterDemo.fun2();
+            
         }
     }
 }

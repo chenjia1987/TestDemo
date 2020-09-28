@@ -107,7 +107,6 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(s);
             }
-
         }
 
         /// <summary>
