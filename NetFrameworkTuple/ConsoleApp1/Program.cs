@@ -10,12 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            StringDemo stringDemo = new StringDemo();
-            //stringDemo.Fun1();
-            //stringDemo.Fun2();
-            stringDemo.Fun3();
-            //stringDemo.Fun4();
-
+            TupleDemo tupleDemo = new TupleDemo();
+            //ValueTupleDemo valueTupleDemo = new ValueTupleDemo();
         }
     }
 }

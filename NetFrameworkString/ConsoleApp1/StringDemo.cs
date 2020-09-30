@@ -8,13 +8,13 @@ namespace ConsoleApp1
 {
     class StringDemo
     {
-        string s1 = "123";
-        string s2 = "123";
+        readonly string s1 = "123";
+        readonly string s2 = "123";
 
         /// <summary>
         /// 声明
         /// </summary>
-        public void fun1()
+        public void Fun1()
         {
 
         }
@@ -22,7 +22,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 比较
         /// </summary>
-        public void fun2()
+        public void Fun2()
         {
             //比较两个指定的 System.String 对象，并返回一个指示二者在排序顺序中的相对位置的整数。
             Console.WriteLine(String.Compare(s1, s2));
@@ -32,15 +32,16 @@ namespace ConsoleApp1
         /// <summary>
         /// 连接字符串
         /// </summary>
-        public void fun3()
+        public void Fun3()
         {
             Console.WriteLine(String.Concat("arg0", 1, "arg2", 1.0));
+            Console.WriteLine(string.Join(" ", new []{ 1, 2, 3, 4 }));
         }
 
         /// <summary>
         /// 格式化
         /// </summary>
-        public void fun4()
+        public void Fun4()
         {
             //将指定字符串中的一个或多个格式项替换为指定对象的字符串表示形式。
             //Console.WriteLine(String.Format("我是格式化的方法：{0}", "123"));
@@ -82,7 +83,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 索引查找
         /// </summary>
-        public void fun5()
+        public void Fun5()
         {
             //报告指定字符串在此实例中的第一个匹配项的从零开始的索引。
             Console.WriteLine("123@456,789@0".IndexOf("@"));
@@ -99,7 +100,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 拆分
         /// </summary>
-        public void fun6()
+        public void Fun6()
         {
             //基于数组中的字符将字符串拆分为多个子字符串。
             String[] arr = "123,456,789,0".Split(',');
@@ -112,7 +113,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 截取
         /// </summary>
-        public void fun7()
+        public void Fun7()
         {
             //从此实例检索子字符串。 子字符串从指定的字符位置开始且具有指定的长度。
             Console.WriteLine("从第七个字符开始往后取2个字符：\n" + "Visual C# Express".Substring(7, 2));
