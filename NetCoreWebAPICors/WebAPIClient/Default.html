@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script type="text/javascript" src="http://localhost:900/JS/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">
+            function responseAPI(btnSub, url, data, type) {
+                $.ajax({
+                    url: url,
+                    type: type,
+                    data: data,
+                    //dataType:"XML", //规定服务端以 XML 格式返回
+                    dataType:"JSON", //规定服务端以 JSON 格式返回
+                    success: function (data) {
+                        console.log(data)
+                        if (data.constructor == Array) {
+                            $.each(data, function (key, item) {
+                                $("<li>", { text: JSON.stringify(item) }).appendTo(btnSub.next());
+                            })
+                        } else {
+                            $("<li>", { text: JSON.stringify(data) }).appendTo(btnSub.next());
+                        }
+                    }
+                })
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="button" value="无参 Get 请求"
+                   onclick='responseAPI($(this), "http://localhost:57324/api/values", "", "GET");' />
+            <ul id="ulResult"></ul>
+        </div>
+    </body>
+</html>

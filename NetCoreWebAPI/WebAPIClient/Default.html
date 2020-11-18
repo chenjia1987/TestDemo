@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="http://localhost:900/JS/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        function responseAPI(btnSub, url, data, type, contentType) {
+            $.ajax({
+                contentType: contentType,
+                url: url,
+                type: type,
+                data: data,
+                //dataType:"XML", //规定服务端以 XML 格式返回
+                //dataType:"JSON", //规定服务端以 JSON 格式返回
+                success: function (data) {
+                    if (data.constructor == Array) {
+                        $.each(data, function (key, item) {
+                            $("<li>", { text: JSON.stringify(item) }).appendTo(btnSub.next());
+                        })
+                    } else {
+                        $("<li>", { text: JSON.stringify(data) }).appendTo(btnSub.next());
+                    }
+                }
+            })
+        }
+        var stu = { sName: "陈嘉", sAge: "18" };
+        var alb = { aName: "风景", aDate: "2019-03-25", aSize: 20, aLock: false };
+    </script>
+</head>
+<body>
+    <div>
+        <input type="button" value="无参 Get 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user", "", "GET");' />
+        <ul id="ulResult"></ul>
+    </div>
+    <div>
+        <input type="button" value="一个参 Get 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/GetName", { "name": "Chenjia123" }, "GET");' />
+        <ul></ul>
+    </div>
+
+    <div>
+        <input type="button" value="多参 Get 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/GetNameAndAge", { "name": "名称", "age": 20 }, "GET");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="无参 Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user", "", "POST");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="一个参 Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostName", JSON.stringify("名称"), "POST", "application/json");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="多参 Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostPars", JSON.stringify({"UName":"陈嘉", "UAge":"18"}), "POST", "application/json");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="多对象 Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostJObject", JSON.stringify({ student: stu, album: alb }), "POST", "application/json");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="多参 Form Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostForm", { name: "chenjia", age: "20" }, "POST", "application/x-www-form-urlencoded");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="单对象 Form Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostFormObject",  { UName: "chenjia", UAge: "20" }, "POST", "application/x-www-form-urlencoded");' />
+        <ul></ul>
+    </div>
+    <div>
+        <input type="button" value="多对象 Form Post 请求"
+               onclick='responseAPI($(this), "http://localhost:57276/api/user/PostFormJObject",  { UName: "chenjia", UAge: "20" }, "POST", "application/x-www-form-urlencoded");' />
+        <ul></ul>
+    </div>
+</body>
+</html>
