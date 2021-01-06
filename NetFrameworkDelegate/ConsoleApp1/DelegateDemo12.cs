@@ -89,7 +89,6 @@ namespace ConsoleApp1.DelegateDemo12
             class2.Event += new Class1().Method1;
             class2.CallEvent("事件调用！");
 
-
             Class2.Delegate2 delegate2 = new Class1().Method1;
             delegate2("delegate2 委托测试！");
         }

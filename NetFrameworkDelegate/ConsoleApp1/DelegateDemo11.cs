@@ -28,51 +28,50 @@ namespace ConsoleApp1.DelegateDemo11
 		}
     }
 
-public class Publisher
-{
-	public event EventHandler MyEvent;
-	public void DoSomething()
+	public class Publisher
 	{
-		// 做某些其他的事情
-		Console.WriteLine("DoSomething invoked!");
-
-		if (MyEvent != null)
+		public event EventHandler MyEvent;
+		public void DoSomething()
 		{
-			Delegate[] delArray = MyEvent.GetInvocationList();
-			foreach (Delegate del in delArray)
+			// 做某些其他的事情
+			Console.WriteLine("DoSomething invoked!");
+
+			if (MyEvent != null)
 			{
-				EventHandler method = (EventHandler)del;
-				method.BeginInvoke(null, EventArgs.Empty, null, null);
+				Delegate[] delArray = MyEvent.GetInvocationList();
+				foreach (Delegate del in delArray)
+				{
+					EventHandler method = (EventHandler)del;
+					method.BeginInvoke(null, EventArgs.Empty, null, null);
+				}
 			}
 		}
 	}
-}
 
-public class Subscriber1
-{
-	public void OnEvent(object sender, EventArgs e)
+	public class Subscriber1
 	{
-		Thread.Sleep(TimeSpan.FromSeconds(3)); // 模拟耗时三秒才能完成方法
-		Console.WriteLine("Waited for 3 seconds, subscriber1 invoked!");
+		public void OnEvent(object sender, EventArgs e)
+		{
+			Thread.Sleep(TimeSpan.FromSeconds(3)); // 模拟耗时三秒才能完成方法
+			Console.WriteLine("Waited for 3 seconds, subscriber1 invoked!");
+		}
 	}
-}
 
-public class Subscriber2
-{
-	public void OnEvent(object sender, EventArgs e)
+	public class Subscriber2
 	{
-		throw new Exception("Subsciber2 Failed");   // 即使抛出异常也不会影响到客户端
-													//Console.WriteLine("Subscriber2 immediately Invoked!");
+		public void OnEvent(object sender, EventArgs e)
+		{
+			throw new Exception("Subsciber2 Failed");   // 即使抛出异常也不会影响到客户端
+														//Console.WriteLine("Subscriber2 immediately Invoked!");
+		}
 	}
-}
 
-public class Subscriber3
-{
-	public void OnEvent(object sender, EventArgs e)
+	public class Subscriber3
 	{
-		Thread.Sleep(TimeSpan.FromSeconds(2));  // 模拟耗时两秒才能完成方法
-		Console.WriteLine("Waited for 2 seconds, subscriber3 invoked!");
+		public void OnEvent(object sender, EventArgs e)
+		{
+			Thread.Sleep(TimeSpan.FromSeconds(2));  // 模拟耗时两秒才能完成方法
+			Console.WriteLine("Waited for 2 seconds, subscriber3 invoked!");
+		}
 	}
-}
-
 }

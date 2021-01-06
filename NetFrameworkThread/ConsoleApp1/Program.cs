@@ -11,8 +11,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Thread ts = new Thread(new ThreadStart(ThreadDemo.ThreadProc));//创建一个线程
-            ts.Start();//启动线程
+            //ThreadDemo1.Fun1();
+
+            //ThreadDemo2.Fun1();
+            //ThreadDemo2.Fun2();
+            ThreadDemo2.Fun3();
         }
     }
 }

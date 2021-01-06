@@ -33,7 +33,8 @@ namespace ConsoleApp1.DelegateDemo5
         public void DoSomething()
         {
             if (NumberChanged != null)
-            {    // 触发事件
+            {
+                //触发事件
                 string rtn = NumberChanged();
                 Console.WriteLine(rtn);     // 打印返回的字符串，输出为Subscriber3
             }

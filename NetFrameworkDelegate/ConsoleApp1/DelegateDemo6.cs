@@ -34,7 +34,7 @@ namespace ConsoleApp1.DelegateDemo6
 
 		public void DoSomething()
 		{
-			// 做某些其余的事情
+			//做某些其余的事情
 			if (NumberChanged != null) // 触发事件
 			{
 				string rtn = NumberChanged();

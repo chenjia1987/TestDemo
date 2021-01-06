@@ -10,14 +10,16 @@ namespace ConsoleApp1.DelegateDemo3
             Alarm alarm = new Alarm(); //警报器
 
             heater.Boiled += alarm.MakeAlert; //注册方法
-            heater.Boiled += (new Alarm()).MakeAlert; //给匿名对象注册方法
+            heater.Boiled += new Alarm().MakeAlert; //给匿名对象注册方法
             heater.Boiled += new Heater.BoiledEventHandler(alarm.MakeAlert); //也可以这么注册
             heater.Boiled += Display.ShowMsg; //注册静态方法
             heater.BoilWater(); //烧水，会自动调用注册过对象的方法
         }
     }
 
-    //热水器
+    /// <summary>
+    /// 热水器
+    /// </summary>
     public class Heater
     {
         private int temperature;
@@ -27,7 +29,9 @@ namespace ConsoleApp1.DelegateDemo3
         public delegate void BoiledEventHandler(Object sender, BoiledEventArgs e); //声明委托
         public event BoiledEventHandler Boiled; //声明事件
 
-        //定义 BoiledEventArgs 类，传递给 Observer 所感兴趣的信息
+        /// <summary>
+        /// 定义 BoiledEventArgs 类，传递给 Observer 所感兴趣的信息
+        /// </summary>
         public class BoiledEventArgs : EventArgs
         {
             public readonly int temperature;
@@ -37,7 +41,10 @@ namespace ConsoleApp1.DelegateDemo3
             }
         }
 
-        //可以供继承自 Heater 的类重写，以便继承类拒绝其他对象对它的监视
+        /// <summary>
+        /// 可以供继承自 Heater 的类重写，以便继承类拒绝其他对象对它的监视
+        /// </summary>
+        /// <param name="e"></param>
         protected virtual void OnBoiled(BoiledEventArgs e)
         {
             //如果有对象注册
@@ -47,7 +54,9 @@ namespace ConsoleApp1.DelegateDemo3
             }
         }
 
-        //烧水
+        /// <summary>
+        /// 烧水
+        /// </summary>
         public void BoilWater()
         {
             for (int i = 0; i <= 100; i++)
@@ -63,7 +72,9 @@ namespace ConsoleApp1.DelegateDemo3
         }
     }
 
-    //警报器
+    /// <summary>
+    /// 警报器
+    /// </summary>
     public class Alarm
     {
         public void MakeAlert(Object sender, Heater.BoiledEventArgs e)

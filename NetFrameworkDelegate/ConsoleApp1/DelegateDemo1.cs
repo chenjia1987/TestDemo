@@ -2,10 +2,24 @@
 
 namespace ConsoleApp1.DelegateDemo1
 {
+    /// <summary>
+    /// 定义委托
+    /// </summary>
+    /// <param name="name"></param>
+    public delegate void GreetingDelegate(string name);
+
     public class DelegateDemo1
     {
-        GreetingDelegate greetingDelegate1, greetingDelegate2; //声明委托变量
-        GreetingManager greetingManager = new GreetingManager();
+        public DelegateDemo1()
+        {
+            Fun1();
+            Fun2();
+            Fun3();
+            Fun4();
+        }
+
+        static GreetingDelegate greetingDelegate1, greetingDelegate2; //声明委托变量
+        static GreetingManager greetingManager = new GreetingManager();
 
         /// <summary>
         /// 实例化委托
@@ -14,12 +28,12 @@ namespace ConsoleApp1.DelegateDemo1
         {
             greetingDelegate1 = greetingManager.EnglishGreeting; //实例化委托
             greetingDelegate2 = greetingManager.ChineseGreeting; //实例化委托
+            greetingDelegate1("Jimmy Zhang"); //调用委托
+            greetingDelegate2("张子阳"); //调用委托
+
 
             greetingManager.GreetPeople("Jimmy Zhang", greetingDelegate1);
             greetingManager.GreetPeople("张子阳", greetingDelegate2);
-
-            greetingDelegate1("Jimmy Zhang");
-            greetingDelegate2("张子阳");
 
         }
 
@@ -49,6 +63,9 @@ namespace ConsoleApp1.DelegateDemo1
             greetingDelegate1("Jimmy Zhang");
         }
 
+
+
+
         /// <summary>
         /// 实例化委托
         /// </summary>
@@ -57,18 +74,25 @@ namespace ConsoleApp1.DelegateDemo1
             //greetingManager.MakeGreet = greetingManager.EnglishGreeting; //编译错误1
             greetingManager.MakeGreet += greetingManager.ChineseGreeting;
             greetingManager.GreetPeople("Jimmy Zhang");
-
         }
     }
 
-    /// <summary>
-    /// 定义委托
-    /// </summary>
-    /// <param name="name"></param>
-    public delegate void GreetingDelegate(string name);
-
     public class GreetingManager
     {
+        /// <summary>
+        /// 声明事件
+        /// </summary>
+        public event GreetingDelegate MakeGreet;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        public void GreetPeople(string name)
+        {
+            MakeGreet(name); //调用事件
+        }
+
         /// <summary>
         /// 使用委托作为参数
         /// </summary>
@@ -77,19 +101,6 @@ namespace ConsoleApp1.DelegateDemo1
         public void GreetPeople(string name, GreetingDelegate MakeGreeting)
         {
             MakeGreeting(name);
-        }
-
-        /// <summary>
-        /// 声明事件
-        /// </summary>
-        public event GreetingDelegate MakeGreet;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="name"></param>
-        public void GreetPeople(string name)
-        {
-            MakeGreet(name); //调用事件
         }
 
         public void EnglishGreeting(string name)
