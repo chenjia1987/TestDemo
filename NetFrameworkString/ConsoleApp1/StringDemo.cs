@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -22,7 +18,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 比较
         /// </summary>
-        public void Fun2()
+        public void StringCompare()
         {
             //比较两个指定的 System.String 对象，并返回一个指示二者在排序顺序中的相对位置的整数。
             Console.WriteLine(String.Compare(s1, s2));
@@ -32,16 +28,16 @@ namespace ConsoleApp1
         /// <summary>
         /// 连接字符串
         /// </summary>
-        public void Fun3()
+        public void StringConcat()
         {
             Console.WriteLine(String.Concat("arg0", 1, "arg2", 1.0));
-            Console.WriteLine(string.Join(" ", new []{ 1, 2, 3, 4 }));
+            Console.WriteLine(String.Join(" ", new[] { 1, 2, 3, 4 }));
         }
 
         /// <summary>
         /// 格式化
         /// </summary>
-        public void Fun4()
+        public void StringFormat()
         {
             //将指定字符串中的一个或多个格式项替换为指定对象的字符串表示形式。
             //Console.WriteLine(String.Format("我是格式化的方法：{0}", "123"));
@@ -66,7 +62,7 @@ namespace ConsoleApp1
             Console.WriteLine("{0:Y}格式化：" + String.Format("{0:Y}", DateTime.Now));
 
             ////返回一个新字符串，该字符串通过在此实例中的字符左侧填充指定的 Unicode 字符来达到指定的总长度，从而使这些字符右对齐。
-            //Console.WriteLine($"填充后的字符串为：\n{"Visual C# Express".PadLeft("Visual C# Express".Length + 4, '_')}");
+            Console.WriteLine($"填充后的字符串为：\n{"Visual C# Express".PadLeft("Visual C# Express".Length + 4, '_')}");
 
             ////返回一个新字符串，该字符串通过在此字符串中的字符右侧填充指定的 Unicode 字符来达到指定的总长度，从而使这些字符左对齐。
             //Console.WriteLine($"填充后的字符串为：\n{"Visual C# Express".PadRight("Visual C# Express".Length + 4, '_')}");
@@ -83,7 +79,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 索引查找
         /// </summary>
-        public void Fun5()
+        public void StringIndexOf()
         {
             //报告指定字符串在此实例中的第一个匹配项的从零开始的索引。
             Console.WriteLine("123@456,789@0".IndexOf("@"));
@@ -100,7 +96,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 拆分
         /// </summary>
-        public void Fun6()
+        public void StringSplit()
         {
             //基于数组中的字符将字符串拆分为多个子字符串。
             String[] arr = "123,456,789,0".Split(',');
@@ -113,10 +109,19 @@ namespace ConsoleApp1
         /// <summary>
         /// 截取
         /// </summary>
-        public void Fun7()
+        public void StringSubstring()
         {
             //从此实例检索子字符串。 子字符串从指定的字符位置开始且具有指定的长度。
             Console.WriteLine("从第七个字符开始往后取2个字符：\n" + "Visual C# Express".Substring(7, 2));
+        }
+
+        /// <summary>
+        /// 剪切
+        /// </summary>
+        public void StringTrim()
+        {
+            Console.WriteLine("  去除空格后的样式 ".Trim());
+            Console.WriteLine("苏州市".TrimEnd('州', '市'));
         }
     }
 }
